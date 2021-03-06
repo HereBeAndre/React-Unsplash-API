@@ -1,17 +1,12 @@
 import React from "react";
+import ImageCard from "../ImageCard/ImageCard";
+import Container from "@material-ui/core/Container";
 
 const ImageList = (props) => {
-  console.log(props);
   const images = props.images.map((image) => {
-    return (
-      <img
-        key={image.id}
-        alt={image.alt_description}
-        src={image.urls.regular}
-      ></img>
-    );
+    return <ImageCard key={image.id} image={image} />;
   });
-  return <div>{images}</div>;
+  return <Container>{images}</Container>;
 };
 
 export default ImageList;

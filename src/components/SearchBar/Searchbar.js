@@ -35,10 +35,11 @@ const SearchBar = (props) => {
       <form className={classes.root} onSubmit={onInputSubmit}>
         <TextField
           id="outlined-margin-dense"
-          placeholder="Start browsing..."
           className={classes.textField}
+          placeholder="Start browsing..."
           margin="dense"
           variant="outlined"
+          autoFocus={true}
           value={searchValue}
           onChange={onInputChange}
         />
