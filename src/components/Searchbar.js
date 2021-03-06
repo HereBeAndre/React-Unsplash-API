@@ -27,7 +27,7 @@ const SearchBar = (props) => {
     e.preventDefault();
     props.onSubmit(searchValue);
   };
-  console.log(searchValue);
+
   return (
     <div className={classes.root}>
       <form onSubmit={onInputSubmit}>

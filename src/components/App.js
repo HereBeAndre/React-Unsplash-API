@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import unsplash from "../api/unsplash";
+import ImageList from "./ImageList";
 import SearchBar from "./Searchbar";
 
 const App = () => {
@@ -8,14 +9,13 @@ const App = () => {
     const response = await unsplash.get("/search/photos", {
       params: { query: searchTerm },
     });
-    console.log(response.data.results);
     setImages(response.data.results);
   };
 
   return (
     <>
       <SearchBar onSubmit={onSearchSubmit} />
-      {/* <ImageList images={images}></ImageList> */}
+      <ImageList images={images} />
     </>
   );
 };
