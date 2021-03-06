@@ -6,7 +6,7 @@ const ImageCard = (props) => {
     urls: { regular },
   } = props.image;
 
-  return <img alt={alt_description} src={regular}></img>;
+  return <img src={regular} alt={alt_description}></img>;
 };
 
 export default ImageCard;
