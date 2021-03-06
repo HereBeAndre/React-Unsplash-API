@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import { Button } from "@material-ui/core";
+import SearchIcon from "@material-ui/icons/Search";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
+    alignItems: "center",
     flexWrap: "wrap",
   },
   textField: {
@@ -29,8 +31,8 @@ const SearchBar = (props) => {
   };
 
   return (
-    <div className={classes.root}>
-      <form onSubmit={onInputSubmit}>
+    <div>
+      <form className={classes.root} onSubmit={onInputSubmit}>
         <TextField
           id="outlined-margin-dense"
           placeholder="Start browsing..."
@@ -41,6 +43,7 @@ const SearchBar = (props) => {
           onChange={onInputChange}
         />
         <Button type="submit" variant="contained" color="primary">
+          <SearchIcon />
           Search
         </Button>
       </form>

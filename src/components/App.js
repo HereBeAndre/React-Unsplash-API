@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import unsplash from "../api/unsplash";
-import ImageList from "./ImageList";
-import SearchBar from "./Searchbar";
+import ImageList from "./ImageList/ImageList";
+import SearchBar from "./SearchBar/Searchbar";
 
 const App = () => {
   const [images, setImages] = useState([]);
