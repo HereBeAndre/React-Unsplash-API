@@ -10,3 +10,5 @@ const ImageCard = (props) => {
 };
 
 export default ImageCard;
+
+// TODO: Set dynamic height for images
